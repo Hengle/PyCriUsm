@@ -32,11 +32,7 @@ class SRTrans(Trans):
 
 
 def get_usm_decrypt_key(video_name: str, version_key: int):
-	video_name = video_name.encode()
-	name_hash = 0
-	for i in video_name:
-		name_hash = (name_hash * 11 + i) & 0xffffffffffffffff
-	return (version_key + name_hash) % 72043514036987937
+	pass
 
 
 def test1_wrap(input_path, video_name, version_key, output):
